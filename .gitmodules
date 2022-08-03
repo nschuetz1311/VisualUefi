@@ -1,7 +1,6 @@
 [submodule "edk2"]
 	path = edk2
 	url = https://github.com/ionescu007/edk2.git
-	tag = edk2-stable202105
 
 [submodule "openssl"]
 	path = openssl
