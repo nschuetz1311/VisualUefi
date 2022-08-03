@@ -1,0 +1,98 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "build edk2 solution",
+			"type": "shell",
+			"command": "devenv",
+			"args": [
+				"EDK-II.sln",
+				"/build"
+			],
+			"options": {
+				"cwd": "${workspaceFolder}\\EDK-II"
+			},
+			"presentation": {
+				"echo": false,
+				"reveal": "always",
+				"focus": false,
+				"panel": "shared",
+				"showReuseMessage": false,
+				"clear": false
+			}
+		},
+		{
+			"label": "build Fj-additional solution",
+			"type": "shell",
+			"command": "devenv",
+			"args": [
+				"EDK-II_FJ_Additional.sln",
+				"/build"
+			],
+			"options": {
+				"cwd": "${workspaceFolder}\\EDK-II"
+			},
+			"presentation": {
+				"echo": false,
+				"reveal": "always",
+				"focus": false,
+				"panel": "shared",
+				"showReuseMessage": false,
+				"clear": false
+			}
+		},
+		{
+			"label": "current solution",
+			"type": "shell",
+			"command": "cd .. &&  FOR /r %i in (*.sln) do call devenv %i",
+			"args": [
+				"/build"
+			],
+			"options": {
+				"cwd": "${relativeFileDirname}"
+			},
+			"presentation": {
+				"echo": true,
+				"reveal": "always",
+				"focus": false,
+				"panel": "shared",
+				"showReuseMessage": false,
+				"clear": false
+			}
+		},
+		{
+			"label": "Build EDK-libs",
+			"type": "shell",
+			"dependsOrder": "sequence",
+			"dependsOn": [
+				"build edk2 solution",
+				"build Fj-additional solution",
+			],
+			"group": "build"
+		},
+		{
+			/**
+			 * There should probably be a way to distinguish between
+			 * build only current file, and build current file
+			 * after rebuilding
+			 * all of the libs.
+			 */
+			"label": "Build current solution",
+			"type": "shell",
+			"dependsOrder": "sequence",
+			"dependsOn": [
+				"Build EDK-libs",
+				"current solution",
+			],
+			"group": "build",
+			"presentation": {
+				"echo": false,
+				"reveal": "always",
+				"focus": false,
+				"panel": "shared",
+				"showReuseMessage": false,
+				"clear": false
+			}
+		},
+	]
+}

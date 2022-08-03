@@ -1,0 +1,15 @@
+{
+	"makefile.extensionOutputFolder": "./.vscode",
+	"terminal.integrated.defaultProfile.windows": "Command Prompt",
+	"editor.renderWhitespace": "trailing",
+	"editor.rulers": [
+		80,
+	],
+	"editor.formatOnSave": true,
+	"editor.tabSize": 8,
+	"editor.insertSpaces": false,
+	"editor.detectIndentation": false,
+	"files.associations": {
+		"header.h": "c"
+	}
+}
