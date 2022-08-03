@@ -22,26 +22,6 @@
 			}
 		},
 		{
-			"label": "build Fj-additional solution",
-			"type": "shell",
-			"command": "devenv",
-			"args": [
-				"EDK-II_FJ_Additional.sln",
-				"/build"
-			],
-			"options": {
-				"cwd": "${workspaceFolder}\\EDK-II"
-			},
-			"presentation": {
-				"echo": false,
-				"reveal": "always",
-				"focus": false,
-				"panel": "shared",
-				"showReuseMessage": false,
-				"clear": false
-			}
-		},
-		{
 			"label": "current solution",
 			"type": "shell",
 			"command": "cd .. &&  FOR /r %i in (*.sln) do call devenv %i",
@@ -66,7 +46,6 @@
 			"dependsOrder": "sequence",
 			"dependsOn": [
 				"build edk2 solution",
-				"build Fj-additional solution",
 			],
 			"group": "build"
 		},
