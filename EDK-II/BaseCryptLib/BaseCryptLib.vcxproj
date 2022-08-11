@@ -46,7 +46,6 @@
     <ClCompile Include="$(EDK_PATH)\CryptoPkg\Library\BaseCryptLib\Pk\CryptAuthenticodeNull.c" />
     <ClCompile Include="$(EDK_PATH)\CryptoPkg\Library\BaseCryptLib\Pk\CryptDhNull.c" />
     <ClCompile Include="$(EDK_PATH)\CryptoPkg\Library\BaseCryptLib\Pk\CryptPkcs5Pbkdf2Null.c" />
-    <ClCompile Include="$(EDK_PATH)\CryptoPkg\Library\BaseCryptLib\Pk\CryptPkcs7Verify.c" />
     <ClCompile Include="$(EDK_PATH)\CryptoPkg\Library\BaseCryptLib\Pk\CryptPkcs7VerifyNull.c" />
     <ClCompile Include="$(EDK_PATH)\CryptoPkg\Library\BaseCryptLib\Pk\CryptRsaExtNull.c" />
     <ClCompile Include="$(EDK_PATH)\CryptoPkg\Library\BaseCryptLib\Pk\CryptTsNull.c" />
