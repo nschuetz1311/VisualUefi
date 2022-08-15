@@ -6,3 +6,6 @@
 	path = openssl
 	url = https://github.com/openssl/openssl
 	branch = OpenSSL_1_1_0-stable
+[submodule "Applications/HelloWorld"]
+	path = Applications/HelloWorld
+	url = git@github.com:nschuetz1311/HelloWorld.git

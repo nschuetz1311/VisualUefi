@@ -24,12 +24,13 @@
 		{
 			"label": "current solution",
 			"type": "shell",
-			"command": "cd .. &&  FOR /r %i in (*.sln) do call devenv %i",
+			"command": "devenv",
 			"args": [
+				"${fileBasenameNoExtension}.sln",
 				"/build"
 			],
 			"options": {
-				"cwd": "${relativeFileDirname}"
+				"cwd": "${workspaceFolder}\\Applications\\${fileBasenameNoExtension}"
 			},
 			"presentation": {
 				"echo": true,
