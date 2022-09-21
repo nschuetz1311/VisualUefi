@@ -42,6 +42,67 @@
 			}
 		},
 		{
+			"label": "Launch_Qemu_Task",
+			"type":"shell",
+			"command": "qemu.exe",
+			"args": [
+				{
+					"value": "-name \"VisualUEFI Debugger\"",
+					"quoting": "escape"
+				},
+				{
+					"value": "-drive file=OVMF_CODE-need-smm.fd,if=pflash,format=raw,unit=0,readonly=off",
+					"quoting": "escape"
+				},
+				{
+					"value": "-drive file=OVMF_VARS-need-smm.fd,if=pflash,format=raw,unit=1,readonly=on",
+					"quoting": "escape"
+				},
+				{
+					"value": "-drive file=UefiShell.iso,format=raw",
+					"quoting": "escape"
+				},
+				{
+					"value": "-m 512 -machine q35,smm=on -nodefaults -vga std",
+					"quoting": "escape"
+				},
+				{
+					"value": "-global driver=cfi.pflash01,property=secure,value=on",
+					"quoting": "escape"
+				},
+				{
+					"value": "-global ICH9-LPC.disable_s3=1",
+					"quoting": "escape"
+				},
+				/**
+				 * This parameter opens up an emulation for the current project.
+				 * It would be nice to have an option which can map all apps to
+				 * a respective drive so the user can emulate all at once.
+				 * This however would currently lead to an problem if not all
+				 * Projects were already compiled successfully, 
+				 * thereforre it probably is best to have an option
+				 * as the one underneath which only works with the
+				 * current working Application.
+				 */
+				{
+					"value": "-drive file=fat:rw:rw:${config:APP_PATH}\\${fileBasenameNoExtension}\\${config:RELEASE_PATH}",
+					"quoting": "escape"
+				},
+			],
+			"options": {
+				"cwd": "${workspaceFolder}\\debugger",
+			},
+			"presentation": {
+				"echo": false,
+				"reveal": "never",
+				"focus": false,
+				"panel": "shared",
+				"showReuseMessage": false,
+				"clear": false
+			}
+		},
+
+		{
 			"label": "Build EDK-libs",
 			"type": "shell",
 			"dependsOrder": "sequence",
@@ -74,5 +135,15 @@
 				"clear": false
 			}
 		},
+		{
+			"label": "Start Qemu",
+			"type": "shell",
+			"dependsOrder": "sequence",
+			"dependsOn":[
+				"Launch_Qemu_Task",
+			],
+			"group": "build"
+		},
+
 	]
 }

@@ -10,5 +10,8 @@
 	"editor.detectIndentation": false,
 	"files.associations": {
 		"header.h": "c"
-	}
+	},
+	// Variables
+	"APP_PATH": "${workspaceFolder}\\Applications",
+	"RELEASE_PATH": "x64\\Release",
 }
