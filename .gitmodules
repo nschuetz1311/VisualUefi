@@ -1,11 +1,13 @@
 [submodule "edk2"]
 	path = edk2
-	url = https://github.com/ionescu007/edk2.git
+	url = https://github.com/tianocore/edk2.git
+	tag = edk2-stable202105
 
 [submodule "openssl"]
 	path = openssl
 	url = https://github.com/openssl/openssl
 	branch = OpenSSL_1_1_0-stable
+
 [submodule "Applications/HelloWorld"]
 	path = Applications/HelloWorld
 	url = git@github.com:nschuetz1311/HelloWorld.git
