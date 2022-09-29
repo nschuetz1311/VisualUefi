@@ -1,7 +1,7 @@
 [submodule "edk2"]
 	path = edk2
 	url = https://github.com/tianocore/edk2.git
-	tag = edk2-stable202105
+	tag = edk2-stable202002
 
 [submodule "openssl"]
 	path = openssl
