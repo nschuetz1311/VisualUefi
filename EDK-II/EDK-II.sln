@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.24720.0
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32901.82
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BaseLib", "BaseLib\BaseLib.vcxproj", "{7DEFAA61-169C-48B9-95B8-410B5493033B}"
 EndProject
@@ -59,6 +59,8 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "UefiHiiServicesLib", "UefiHiiServicesLib\UefiHiiServicesLib.vcxproj", "{8B3E5877-7789-4E21-9E7E-497FCFC70AC4}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Iolib", "IoLib\Iolib.vcxproj", "{33D33BF3-349E-4768-9459-836A9F7558FB}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "NetworkPkgLib", "NetworkPkgLib\NetworkPkgLib.vcxproj", "{3FD34E9B-E90C-44E1-B510-1F632A509F10}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -119,8 +121,13 @@ Global
 		{8B3E5877-7789-4E21-9E7E-497FCFC70AC4}.Release|x64.Build.0 = Release|x64
 		{33D33BF3-349E-4768-9459-836A9F7558FB}.Release|x64.ActiveCfg = Release|x64
 		{33D33BF3-349E-4768-9459-836A9F7558FB}.Release|x64.Build.0 = Release|x64
+		{3FD34E9B-E90C-44E1-B510-1F632A509F10}.Release|x64.ActiveCfg = Release|x64
+		{3FD34E9B-E90C-44E1-B510-1F632A509F10}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EE7DB911-D352-4439-BBFA-F199CEF339D6}
 	EndGlobalSection
 EndGlobal

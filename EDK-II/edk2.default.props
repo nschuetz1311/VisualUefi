@@ -6,7 +6,7 @@
     <OPENSSL_PATH>$(SolutionDir)..\openssl</OPENSSL_PATH>
   </PropertyGroup>
   <PropertyGroup>
-    <IncludePath>$(EDK_PATH)\MdePkg\Include;$(EDK_PATH)\MdePkg\Include\X64;$(EDK_PATH)\MdeModulePkg\Include;$(EDK_PATH)\ShellPkg\Include;$(EDK_PATH)\CryptoPkg\include;$(OPENSSL_PATH)\include</IncludePath>
+    <IncludePath>$(EDK_PATH)\MdePkg\Include;$(EDK_PATH)\MdePkg\Include\X64;$(EDK_PATH)\MdeModulePkg\Include;$(EDK_PATH)\ShellPkg\Include;$(EDK_PATH)\CryptoPkg\include;$(OPENSSL_PATH)\include;$(EDK_PATH)\NetworkPkg\Include</IncludePath>
   </PropertyGroup>
   <PropertyGroup Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
