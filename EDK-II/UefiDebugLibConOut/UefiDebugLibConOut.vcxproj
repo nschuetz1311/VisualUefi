@@ -18,6 +18,7 @@
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.targets" />
   <ItemGroup>
+    <ClCompile Include="$(EDK_PATH)\MdePkg\Library\UefiDebugLibStdErr\DebugLibConstructor.c" />
     <ClCompile Include="$(EDK_PATH)\MdePkg\Library\UefiDebugLibConOut\DebugLib.c" />
   </ItemGroup>
 </Project>
